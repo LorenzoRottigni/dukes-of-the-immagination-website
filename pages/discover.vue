@@ -1,18 +1,19 @@
 <template lang="pug">
-    .nuxt-app.h-100
+    .nuxt-app.h-100.py-3
         h1.text-white.text-center.mt-5.mb-4 L'exploit dei mastri birrai: un cyber thriller
-        .container-fluid#slider-container
+        .container-fluid#slider-container.pb-3.pb-lg-0
             .row.align-items-center
                 #slider-left.bg-light(v-if="currentIndex > 0", @click="decrementCurrentIndex")
                     i.fas.fa-backward
-                .col-3.offset-2#slider-image-container
+                .col-8.offset-2.col-lg-3.offset-lg-2#slider-image-container
                     img.rounded(:src=" slides[currentIndex].img_url ", alt="book image screens")
-                .col-4.offset-1
+                .col-8.offset-2.col-lg-4.offset-lg-1.mt-5.mt-lg-0
                     #slider-text-container.rounded.shadow-lg
                         p.text-white.overflow-auto.p-3
                             | {{slides[currentIndex].paragraph}}
-                        button.btn.btn-outline-light.m-3(v-if="currentIndex === 2")
-                            nuxt-link.text-reset(to="/exploit_dei_mastri_birrai") PURCHASE
+                        .p-3
+                            button.btn.btn-outline-light.w-100(v-if="currentIndex === 2")
+                                    nuxt-link.text-reset(to="/exploit_dei_mastri_birrai") PURCHASE
                 #slider-right.bg-light(v-if="currentIndex != 2",@click="incrementCurrentIndex")
                     i.fas.fa-forward
 </template>

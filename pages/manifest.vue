@@ -1,7 +1,7 @@
 <template lang="pug">
     .container-fluid.h-100
-        .row.h-100
-            .col-5.h-100.bg-dark.py-5.shadow-lg.d-flex.align-items-center
+        .row.h-lg-100
+            .col-12.col-lg-5.h-100.bg-dark.py-5.shadow-lg.d-flex.align-items-center
                 nav#sidenav
                     ul.d-flex.flex-column.list-unstyled.gap-3.mb-0.text-white
                         li(
@@ -12,7 +12,7 @@
                         )
                             i.fab.fa-artstation.mx-3.ml-0
                             | {{section.title}}
-            #text-section.col-7.bg-light
+            #text-section.col-12.col-lg-7.bg-light
                 h1.text-center.mt-5.mb-3 {{sections[currentIndex].title}}
                 .paragraphs-container
                     p(:key="index+'-paragraph'" v-for="(paragraph, index) in sections[currentIndex].paragraphs")
@@ -135,6 +135,8 @@ export default {
     },
     methods:{
         setCurrentIndex(newIndex){
+            const textContainer = document.getElementById('text-section')
+            textContainer.scrollIntoView();
             this.currentIndex = newIndex
         }
     }
