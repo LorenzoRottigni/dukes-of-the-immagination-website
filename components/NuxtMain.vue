@@ -1,7 +1,7 @@
 <template lang="pug">
     .nuxt-app.h-100.d-flex.align-items-center
         //img.w-25.d-block.mx-auto(:src="require('~/static/beer.jpg')", alt="book cover")   
-        h1.text-center.text-white.w-100 We are passionate people who love beer,books, and cyber
+        h1.text-center.text-white.w-100 We are passionate people who love beer, books, and cyber
 </template>
 
 <style lang="sass">
@@ -12,6 +12,7 @@
         background: rgb(2,0,36)
         background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 70%, #333333  100%)
         position: relative
+        overflow: auto
         z-index: 2
         &::after
             content: ''
