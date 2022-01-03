@@ -9,7 +9,8 @@
 <style lang="sass" scoped>
     .app
         height: 100vh
-        overflow: auto
+        overflow-y: auto
+        overflow-x: hidden
 </style>
 
 <script>

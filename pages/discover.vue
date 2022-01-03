@@ -7,7 +7,7 @@
                     i.fas.fa-backward
                 .col-8.offset-2.col-lg-3.offset-lg-2#slider-image-container
                     img.rounded(:src=" slides[currentIndex].img_url ", alt="book image screens")
-                .col-8.offset-2.col-lg-4.offset-lg-1.mt-5.mt-lg-0
+                .col-10.offset-1.col-lg-4.offset-lg-1.mt-5.mt-lg-0
                     #slider-text-container.rounded.shadow-lg
                         p.text-white.overflow-auto.p-3
                             | {{slides[currentIndex].paragraph}}
@@ -76,6 +76,7 @@ img
     background-color: rgba(192, 192, 192, 0.4)
 #slider-container
     position: relative
+    overflow-x: hidden
     #slider-left, #slider-right
         position: absolute
         top: 50%
@@ -92,4 +93,12 @@ img
         left: 5%
     #slider-right
         right: 5%
+
+@media screen and (max-width: 420px)
+    #slider-left
+        left: 0 !important
+        transform: translateX(-50%) !important
+    #slider-right
+        right: 0 !important
+        transform: translateX(50%) !important
 </style>
