@@ -19,7 +19,7 @@
                 )
                     //displayed on active
                     img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'discover'")
-                    nuxt-link.text-dark(to="discover") DISCOVER THE BOOK
+                    nuxt-link.text-dark(to="/discover") DISCOVER THE BOOK
             //CENTRAL IMAGE
             .col-10.offset-1.col-lg-4.offset-lg-0.order-1.order-lg-2.text-center
                 img(:src="require('~/static/dukes_of_immagination_logo.jpg')", alt="dukes of immagination logo")
@@ -32,7 +32,7 @@
                     //displayed on active
                     img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'manifest'")
                     nuxt-link.text-dark(to="/manifest") MANIFESTO
-                // MANIFEST LIST ITEM
+                // BUY LIST ITEM
                 li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2(
                     @click="setCurrentRoute('buy')"
                 )

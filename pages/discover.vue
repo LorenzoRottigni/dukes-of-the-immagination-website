@@ -19,8 +19,8 @@
                             | {{slides[currentIndex].paragraph}}
                         .p-3
                             //display if is the last slide
-                            button.btn.btn-outline-light.w-100(v-if="currentIndex === 2")
-                                    nuxt-link.text-reset(to="/exploit_dei_mastri_birrai") PURCHASE
+                            nuxt-link.d-block.text-center(to="/exploit_dei_mastri_birrai", v-if="currentIndex === 2") PURCHASE
+                                //button.btn.btn-outline-light.w-100
                 //SLIDER-RIGHT if there are pages next
                 #slider-right.bg-light(v-if="currentIndex != 2",@click="incrementCurrentIndex")
                     i.fas.fa-forward
@@ -97,6 +97,9 @@
       position: sticky
   img
       width: 100%
+  a
+    color: gold
+    text-decoration: underline
   #slider-text-container
       background-color: rgba(192, 192, 192, 0.4)
   #slider-container
