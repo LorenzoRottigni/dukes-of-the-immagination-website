@@ -11,7 +11,7 @@
                 .col-8.offset-2.col-lg-3.offset-lg-2#slider-image-container
                     //display the current indexed images
                     img.rounded(:src=" slides[currentIndex].img_url ", alt="book image screens")
-                .col-10.offset-1.col-lg-3.offset-lg-2.mt-5.mt-lg-0
+                .col-10.offset-1.col-lg-4.offset-lg-1.mt-5.mt-lg-0
                     //PARAGRAPH SECTION
                     #slider-text-container.rounded.shadow-lg
                         p.text-white.overflow-auto.p-3

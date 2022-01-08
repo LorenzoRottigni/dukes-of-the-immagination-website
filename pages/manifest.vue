@@ -29,6 +29,7 @@
 </template>
 
 <script>
+  import gsap from "gsap"
 
   export default {
       data(){
@@ -148,7 +149,9 @@
          *  @param {int} newIndex
          */
           setCurrentIndex(newIndex){
-              this.currentIndex = newIndex
+              setTimeout(()=>{
+                  this.currentIndex = newIndex
+              }, 500)
           }
       }
   }
@@ -175,5 +178,8 @@
       /* Handle on hover */
       &::-webkit-scrollbar-thumb:hover
           background: #555
-
+  #text-section
+      z-index: 1
+  #sidenav
+      z-index: 99
 </style>
