@@ -7,16 +7,12 @@
             //UNORDERED LIST LEFT
             ul.col-12.col-lg-4.offset-lg-0.my-3.my-lg-0.list-unstyled.mb-0.d-flex.align-items-center.justify-content-center.order-2.order-lg-1.px-0
                 // HOME LIST ITEM
-                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2(
-                    @click="setCurrentRoute('home')"
-                )
+                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2
                     //displayed on active
-                    img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'home'")
+                    img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'index'")
                     nuxt-link.text-dark(to="/") HOME
                 // DISCOVER THE BOOK LIST ITEM
-                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2(
-                    @click="setCurrentRoute('discover')"
-                )
+                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2
                     //displayed on active
                     img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'discover'")
                     nuxt-link.text-dark(to="/discover") DISCOVER THE BOOK
@@ -26,38 +22,35 @@
             //UNORDERED LIST LEFT
             ul.col-12.col-lg-4.offset-lg-0.mb-3.my-lg-0.list-unstyled.mb-0.d-flex.align-items-center.justify-content-center.order-3.px-0
                 // MANIFEST LIST ITEM
-                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2(
-                    @click="setCurrentRoute('manifest')"
-                )
+                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2
                     //displayed on active
                     img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'manifest'")
                     nuxt-link.text-dark(to="/manifest") MANIFESTO
                 // BUY LIST ITEM
-                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2(
-                    @click="setCurrentRoute('buy')"
-                )
+                li.w-50.text-center.border-top.border-bottom.mx-3.border-dark.py-2
                     //displayed on active
-                    img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'buy'")
+                    img.d-none.d-md-block(:src="require('~/static/pen-black.png')", v-if="currentRoute === 'exploit_dei_mastri_birrai'")
                     nuxt-link.text-dark(to="/exploit_dei_mastri_birrai") BUY THE BOOK
 </template>
 
 <script>
 
   export default {
-      data(){
-          return {
-              currentRoute : 'home'
+    data(){
+        return {
+            currentRoute : 'home'
+        }
+    },
+    watch: {
+          $route() {
+              this.currentRoute = this.$route.name
+              console.log(this.currentRoute);
           }
-      },
-      methods:{
-          /**
-           * @description sets the new active route
-           * @param {string} route
-           */
-          setCurrentRoute(route){
-              this.currentRoute = route
-          }
-      }
+    },
+    mounted(){
+        this.currentRoute = 'index'
+        console.log(this.currentRoute);
+    }
   }
 
 </script>

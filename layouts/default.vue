@@ -25,7 +25,7 @@
       background-position: center
       scroll-behavior: smooth
     a
-      white-space: nowrap
+      white-space: nowrap !important
 </style>
 
 <script>

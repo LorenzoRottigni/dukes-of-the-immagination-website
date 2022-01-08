@@ -38,13 +38,10 @@
             font-family: daniel
 
     //overlay background-image resize
-    @media screen and (max-width: 500px)
+    @media screen and (max-width: 700px)
       .nuxt-app
         &::after
-          background-size: 90%
-    @media screen and (min-width: 501px) and (max-width: 700px)
-      .nuxt-app
-        &::after
-          background-size: 70%
+          background-color: black
+          background-size: 100%
 
 </style>
